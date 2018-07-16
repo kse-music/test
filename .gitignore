@@ -1,7 +1,4 @@
-/.idea
-/*.iml
-/target
-/src/main/webapp/WEB-INF/classes/
-/SIMFANG.TTF
-/SIMHEI.TTF
+.idea/
+*.iml
+target/
 
