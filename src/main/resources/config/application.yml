@@ -3,7 +3,16 @@ spring:
     name: test
   profiles:
     active: local
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:9000/eureka/
+#jersey:
+#  swagger:
+#    port: 9002
+#    base-path: test/api
 #  datasource:
 #    url: jdbc:mysql://192.168.1.159:3306/test?characterEncoding=utf8&amp;autoReconnect=true&amp;failOverReadOnly=false
 #    username: root
 #    password: root@hiekn
+
