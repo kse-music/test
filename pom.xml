@@ -10,7 +10,7 @@
     <parent>
         <groupId>com.hiekn.boot</groupId>
         <artifactId>mcn-projects</artifactId>
-        <version>1.5.18</version>
+        <version>1.5.19</version>
     </parent>
 
     <properties>
