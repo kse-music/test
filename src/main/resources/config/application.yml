@@ -7,5 +7,3 @@ spring:
 #    url: jdbc:mysql://212.64.106.43:3306/kg_builder?characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false
 #    username: root
 #    password: root@hiekn
-mcn:
-  attr: 中文

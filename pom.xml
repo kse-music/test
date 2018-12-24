@@ -90,7 +90,6 @@
                         </property>
                     </propConfig>
                 </configuration>
-
             </plugin>
         </plugins>
 	</build>
