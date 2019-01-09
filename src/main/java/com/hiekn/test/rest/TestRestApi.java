@@ -3,10 +3,8 @@ package com.hiekn.test.rest;
 import com.hiekn.boot.autoconfigure.base.model.result.RestResp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -16,12 +14,9 @@ import javax.ws.rs.core.MediaType;
 @Controller
 public class TestRestApi {
 
-    @Autowired
-    private HttpServletRequest request;
-
     @GET
     @Path("list")
-    @ApiOperation("列表")
+    @ApiOperation("list")
     public RestResp list(){
         return new RestResp("Hello Spring Boot");
     }
@@ -30,9 +25,8 @@ public class TestRestApi {
     @Path("post")
     @ApiOperation("post")
     public RestResp post(@QueryParam("userId") String userId,
-                         @FormParam("bean")String bean,
-                         @FormParam("bean2")String bean2){
-        return new RestResp(request.getParameterMap());
+                         @FormParam("bean")String bean){
+        return new RestResp(userId);
     }
 
 }
