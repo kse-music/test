@@ -1,3 +1,5 @@
+CREATE DATABASE test;
+
 CREATE TABLE `tb_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(64) DEFAULT NULL,
