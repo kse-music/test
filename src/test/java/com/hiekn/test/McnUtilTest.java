@@ -3,10 +3,12 @@ package com.hiekn.test;
 import com.hiekn.boot.autoconfigure.base.util.McnUtils;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class McnUtilTest extends TestBase{
 
     @Test
-    public void testMcn(){
+    public void testMcn() throws IOException {
 
         logger.info("{}",McnUtils.randomUUID());
         logger.info("{}",McnUtils.simpleUUID());
