@@ -1,31 +1,31 @@
 package com.hiekn.test.rest;
 
-import com.hiekn.boot.autoconfigure.base.model.result.RestResp;
+import cn.hiboot.mcn.core.model.result.RestResp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
+import javax.validation.constraints.Max;
 
-@Path("test")
-@Produces(MediaType.APPLICATION_JSON)
-@Api("测试")
-@Controller
+@RequestMapping("test")
+@Api(tags = "测试",description = "test")
+@RestController
+@Validated
 public class TestRestApi {
 
-    @GET
-    @Path("list")
+    @GetMapping("list")
     @ApiOperation("list")
     public RestResp list(){
         return new RestResp("Hello Spring Boot");
     }
 
-    @POST
-    @Path("post")
+    @PostMapping("post")
     @ApiOperation("post")
-    public RestResp post(@QueryParam("userId") String userId,
-                         @FormParam("bean")String bean){
+    public RestResp post(@Max(10) Integer userId, String bean){
         return new RestResp(userId);
     }
 

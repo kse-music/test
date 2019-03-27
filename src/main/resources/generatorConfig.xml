@@ -10,9 +10,9 @@
                 javaTypeResolver?,javaModelGenerator,sqlMapGenerator?,
                 javaClientGenerator?,table+ -->
 
-        <plugin type="com.hiekn.generator.plugin.GenerateBaseMapperAndPagePlugin"/>
-        <plugin type="com.hiekn.generator.plugin.GenerateBaseServiceAndImplementPlugin">
-            <property name="rootInterface" value="com.hiekn.boot.autoconfigure.base.service.BaseService"/>
+        <plugin type="cn.hiboot.crud.plugin.GenerateBaseMapperAndPagePlugin"/>
+        <plugin type="cn.hiboot.crud.plugin.GenerateBaseServiceAndImplementPlugin">
+            <property name="rootInterface" value="cn.hiboot.mcn.core.service.BaseService"/>
             <property name="service" value="org.springframework.stereotype.Service"/>
             <property name="targetProject" value="src/main/java"/>
             <property name="targetPackage" value="${service-package}"/>
@@ -43,7 +43,7 @@
             <property name="enableSubPackages" value="true"/>
             <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
             <property name="trimStrings" value="false"/>
-            <property name="rootClass" value="com.hiekn.boot.autoconfigure.base.model.BaseModel"/>
+            <property name="rootClass" value="cn.hiboot.mcn.core.model.BaseModel"/>
         </javaModelGenerator>
         <!--对应的xml mapper文件  -->
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
@@ -52,7 +52,7 @@
         <!-- 对应的dao接口 -->
         <javaClientGenerator type="XMLMAPPER" targetPackage="${dao-package}" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
-            <property name="rootInterface" value="com.hiekn.boot.autoconfigure.base.mapper.BaseMapper"/>
+            <property name="rootInterface" value="cn.hiboot.mcn.core.mapper.BaseMapper"/>
             <property name="repository" value="org.springframework.stereotype.Repository"/>
         </javaClientGenerator>
 

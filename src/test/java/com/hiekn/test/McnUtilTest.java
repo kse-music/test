@@ -1,6 +1,6 @@
 package com.hiekn.test;
 
-import com.hiekn.boot.autoconfigure.base.util.McnUtils;
+import cn.hiboot.mcn.core.util.McnUtils;
 import org.junit.Test;
 
 import java.io.IOException;
