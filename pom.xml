@@ -89,10 +89,6 @@
                 <configuration>
                     <propConfig>
                         <property>
-                            <name>db.driver</name>
-                            <value>com.mysql.cj.jdbc.Driver</value>
-                        </property>
-                        <property>
                             <name>db.url</name>
                             <value>jdbc:mysql://192.168.1.159:3306/test?characterEncoding=utf8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false</value>
                         </property>
