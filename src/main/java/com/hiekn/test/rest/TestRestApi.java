@@ -1,8 +1,8 @@
 package com.hiekn.test.rest;
 
 import cn.hiboot.mcn.core.model.result.RestResp;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,21 +12,46 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.constraints.Max;
 
 @RequestMapping("test")
-@Api(tags = "测试",description = "test")
 @RestController
 @Validated
 public class TestRestApi {
 
+    @Autowired
+    private Gson gson;
+
     @GetMapping("list")
-    @ApiOperation("list")
-    public RestResp list(){
-        return new RestResp("Hello Spring Boot");
+    public RestResp list(String query) {
+        return new RestResp(query);
     }
 
     @PostMapping("post")
-    @ApiOperation("post")
-    public RestResp post(@Max(10) Integer userId, String bean){
-        return new RestResp(userId);
+    public RestResp post(@Validated UserBean userBean) {
+        return new RestResp(userBean);
     }
 
+
+    static class UserBean {
+
+        private String name;
+
+        @Max(200)
+        private Integer age;
+
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public Integer getAge() {
+            return age;
+        }
+
+        public void setAge(Integer age) {
+            this.age = age;
+        }
+    }
 }
