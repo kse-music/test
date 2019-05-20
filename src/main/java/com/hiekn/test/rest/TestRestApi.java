@@ -4,10 +4,7 @@ import cn.hiboot.mcn.core.model.result.RestResp;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.Max;
 
@@ -24,11 +21,20 @@ public class TestRestApi {
         return new RestResp(query);
     }
 
-    @PostMapping("post")
-    public RestResp post(@Validated UserBean userBean) {
+    @PostMapping("json")
+    public RestResp postJson(@Validated @RequestBody UserBean userBean) {
         return new RestResp(userBean);
     }
 
+    @PostMapping("urlencoded")
+    public RestResp postUrlencoded(String name,@Validated UserBean userBean) {
+        return new RestResp(userBean);
+    }
+
+    @PostMapping("formData")
+    public RestResp postFormData(String name,UserBean userBean) {
+        return new RestResp(userBean);
+    }
 
     static class UserBean {
 
@@ -53,5 +59,6 @@ public class TestRestApi {
         public void setAge(Integer age) {
             this.age = age;
         }
+
     }
 }
