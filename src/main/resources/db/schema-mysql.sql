@@ -1,4 +1,4 @@
-CREATE TABLE `tb_news` (
+CREATE TABLE `t_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(64) NOT NULL,
   `cid` int(11) DEFAULT NULL,
