@@ -2,11 +2,10 @@ package com.hiekn.test.rest;
 
 import cn.hiboot.mcn.core.model.result.RestResp;
 import com.google.gson.Gson;
+import com.hiekn.test.bean.UserBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.constraints.Max;
 
 @RequestMapping("test")
 @RestController
@@ -27,7 +26,7 @@ public class TestRestApi {
     }
 
     @PostMapping("urlencoded")
-    public RestResp postUrlencoded(String name,@Validated UserBean userBean) {
+    public RestResp postUrlencoded(@Validated UserBean userBean) {
         return new RestResp(userBean);
     }
 
@@ -36,29 +35,4 @@ public class TestRestApi {
         return new RestResp(userBean);
     }
 
-    static class UserBean {
-
-        private String name;
-
-        @Max(200)
-        private Integer age;
-
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public Integer getAge() {
-            return age;
-        }
-
-        public void setAge(Integer age) {
-            this.age = age;
-        }
-
-    }
 }
