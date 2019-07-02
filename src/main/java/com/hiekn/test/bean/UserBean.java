@@ -1,7 +1,5 @@
 package com.hiekn.test.bean;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.validation.constraints.Max;
 
 /**
@@ -16,7 +14,7 @@ public class UserBean {
 
     @Max(200)
     private Integer age;
-    @JsonIgnore
+
     private Company company;
 
     public String getName() {

@@ -1,4 +1,4 @@
-INSERT INTO tb_news (id,title,cid) VALUES
+INSERT INTO t_news (id,title,cid) VALUES
 (1, 'Jone',11),
 (2, 'Jack',22),
 (3, 'Tom',33),
