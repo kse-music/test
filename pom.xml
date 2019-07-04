@@ -21,9 +21,15 @@
 
 	<dependencies>
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
+
         <dependency>
             <groupId>cn.hiboot.mcn</groupId>
             <artifactId>mcn-spring-boot-starter</artifactId>
@@ -57,10 +63,6 @@
         </dependency>
 
         <!--<dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>-->
@@ -79,30 +81,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>cn.hiboot.mcn</groupId>
-                <artifactId>crud-maven-plugin</artifactId>
-                <configuration>
-                    <propConfig>
-                        <property>
-                            <name>db.url</name>
-                            <value>jdbc:mysql://192.168.1.159:3306/test?characterEncoding=utf8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false</value>
-                        </property>
-                        <property>
-                            <name>db.user</name>
-                            <value>root</value>
-                        </property>
-                        <property>
-                            <name>db.password</name>
-                            <value>root@hiekn</value>
-                        </property>
-                        <property>
-                            <name>basePkg</name>
-                            <value>com.hiekn.test</value>
-                        </property>
-                    </propConfig>
                 </configuration>
             </plugin>
         </plugins>
