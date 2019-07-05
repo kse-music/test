@@ -1,6 +1,9 @@
 package com.hiekn.test.bean;
 
+import lombok.Data;
+
 import javax.validation.constraints.Max;
+import java.util.List;
 
 /**
  * describe about this class
@@ -8,6 +11,7 @@ import javax.validation.constraints.Max;
  * @author: DingHao
  * @date: 2019/6/29 17:16
  */
+@Data
 public class UserBean {
 
     private String name;
@@ -17,27 +21,6 @@ public class UserBean {
 
     private Company company;
 
-    public String getName() {
-        return name;
-    }
+    private List<Company> companies;
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
 }

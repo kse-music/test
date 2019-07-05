@@ -1,9 +1,7 @@
 package com.hiekn.test.rest;
 
 import cn.hiboot.mcn.core.model.result.RestResp;
-import com.google.gson.Gson;
 import com.hiekn.test.bean.UserBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +9,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Validated
 public class TestRestApi {
-
-    @Autowired
-    private Gson gson;
 
     @GetMapping("list")
     public RestResp list(String query) {
