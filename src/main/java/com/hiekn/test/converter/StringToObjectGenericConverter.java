@@ -1,4 +1,4 @@
-package com.hiekn.test;
+package com.hiekn.test.converter;
 
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;

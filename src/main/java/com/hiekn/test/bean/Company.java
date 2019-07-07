@@ -1,6 +1,6 @@
 package com.hiekn.test.bean;
 
-import com.hiekn.test.MarkObject;
+import com.hiekn.test.converter.MarkObject;
 import lombok.Data;
 
 /**
