@@ -1,7 +1,8 @@
 package com.hiekn.test.bean;
 
 import com.hiekn.test.converter.MarkObject;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * describe about this class
@@ -9,13 +10,11 @@ import lombok.Data;
  * @author: DingHao
  * @date: 2019/6/29 17:16
  */
-@Data
+@Setter
+@Getter
 public class Company implements MarkObject {
 
     private String name;
     private Integer money;
 
-    public Company(String a) {
-        this.name = a;
-    }
 }

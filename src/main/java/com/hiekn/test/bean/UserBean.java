@@ -1,6 +1,7 @@
 package com.hiekn.test.bean;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.Max;
 import java.util.List;
@@ -11,7 +12,8 @@ import java.util.List;
  * @author: DingHao
  * @date: 2019/6/29 17:16
  */
-@Data
+@Setter
+@Getter
 public class UserBean {
 
     private String name;
