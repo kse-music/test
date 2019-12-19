@@ -43,10 +43,16 @@
         </dependency>
 
         <!-- use spring mvc -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>-->
+        <!-- use spring web flux -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
+
         <!--<dependency>
             <groupId>cn.hiboot.mcn</groupId>
             <artifactId>mvc-swagger2</artifactId>

@@ -12,22 +12,22 @@ public class TestRestApi {
 
     @GetMapping("list")
     public RestResp list(String query) {
-        return new RestResp(query);
+        return new RestResp<>(query);
     }
 
     @PostMapping("json")
     public RestResp postJson(@Validated @RequestBody UserBean userBean) {
-        return new RestResp(userBean);
+        return new RestResp<>(userBean);
     }
 
     @PostMapping("urlencoded")
     public RestResp postUrlencoded(@Validated UserBean userBean) {
-        return new RestResp(userBean);
+        return new RestResp<>(userBean);
     }
 
     @PostMapping("formData")
     public RestResp postFormData(String name,UserBean userBean) {
-        return new RestResp(userBean);
+        return new RestResp<>(userBean);
     }
 
 }
