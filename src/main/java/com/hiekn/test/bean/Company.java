@@ -1,6 +1,5 @@
 package com.hiekn.test.bean;
 
-import com.hiekn.test.converter.MarkObject;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,7 +11,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class Company implements MarkObject {
+public class Company {
 
     private String name;
     private Integer money;

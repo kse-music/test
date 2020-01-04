@@ -11,22 +11,22 @@ import org.springframework.web.bind.annotation.*;
 public class TestRestApi {
 
     @GetMapping("list")
-    public RestResp list(String query) {
+    public RestResp<String> list(String query) {
         return new RestResp<>(query);
     }
 
     @PostMapping("json")
-    public RestResp postJson(@Validated @RequestBody UserBean userBean) {
+    public RestResp<UserBean> postJson(@Validated @RequestBody UserBean userBean) {
         return new RestResp<>(userBean);
     }
 
     @PostMapping("urlencoded")
-    public RestResp postUrlencoded(@Validated UserBean userBean) {
+    public RestResp<UserBean> postUrlencoded(@Validated UserBean userBean) {
         return new RestResp<>(userBean);
     }
 
     @PostMapping("formData")
-    public RestResp postFormData(String name,UserBean userBean) {
+    public RestResp<UserBean> postFormData(String name,UserBean userBean) {
         return new RestResp<>(userBean);
     }
 
