@@ -6,8 +6,8 @@ import lombok.Setter;
 /**
  * describe about this class
  *
- * @author: DingHao
- * @date: 2019/6/29 17:16
+ * @author DingHao
+ * @since 2019/6/29 17:16
  */
 @Setter
 @Getter
