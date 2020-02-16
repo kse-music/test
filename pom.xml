@@ -42,25 +42,18 @@
             <artifactId>mvc-swagger2</artifactId>
         </dependency>-->
 
-        <!-- use jersey -->
-        <!--<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jersey</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.hiboot.mcn</groupId>
-            <artifactId>jersey-swagger2-ui</artifactId>
-        </dependency>-->
-
         <!--<dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>-->
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.5.2</version>
             <scope>test</scope>
         </dependency>
 
