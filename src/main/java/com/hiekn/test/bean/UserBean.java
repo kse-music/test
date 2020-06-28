@@ -3,7 +3,6 @@ package com.hiekn.test.bean;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.validation.constraints.Max;
 import java.util.List;
 
 /**
@@ -18,7 +17,6 @@ public class UserBean {
 
     private String name;
 
-    @Max(200)
     private Integer age;
 
     private Company company;
