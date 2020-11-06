@@ -8,7 +8,7 @@
 	<description />
 
     <parent>
-        <artifactId>mcn-boot-parent</artifactId>
+        <artifactId>mcn-boot-starter-parent</artifactId>
         <groupId>cn.hiboot.mcn</groupId>
         <version>2.3.5</version>
     </parent>
