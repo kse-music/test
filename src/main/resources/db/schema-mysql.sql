@@ -1,4 +1,4 @@
-alter database meta_boot character set utf8mb4 collate utf8mb4_general_ci;
+alter database test character set utf8mb4 collate utf8mb4_general_ci;
 
 CREATE TABLE `t_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
